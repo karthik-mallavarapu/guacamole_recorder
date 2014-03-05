@@ -1,2 +1,0 @@
-guacamole_recorder
-==================
