@@ -1,0 +1,7 @@
+guac_host: '192.168.0.17'
+guac_port: 4822
+remote_host: '192.168.0.23'
+remote_port: 3389
+protocol: 'rdp'
+username: 'username'
+password: 'password'

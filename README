@@ -1,0 +1,29 @@
+README: Screen Recorder
+
+Description: The screen recorder ruby application captures a user's remote session into an mp4 video.
+The application relies on guacamole, a HTML5 remote desktop gateway (http://guac-dev.org) for accessing 
+the remote sessions (RDP or VNC).
+
+screen_recorder.rb: A ruby module that communicates with the guacd server and applies relevant operations on the buffered image as instructed by the server.
+
+guacamole_parser.rb: A ruby module for parsing the instructions and data received from the guacd server.
+
+image_processor.rb: A ruby module responsible for periodically writing the buffered images into a named pipe which is fed as input to the ffmpeg process.
+
+test_recorder.rb: A test client that gets the relevant details from a config.yml file and records a video for about 60 seconds.
+
+config.yml: YAML file with details about the remote server, guacd server, user credentials etc.
+
+output.mp4: Sample mp4 video recorded using the application.
+
+Dependencies: 
+
+ruby-2.0.0
+imagemagick 6.8.7
+ffmpeg (Latest git snapshot)
+guacd (0.8.3)
+
+Instructions:
+
+# bundle install
+# bundle exec ruby test_recorder.rb
